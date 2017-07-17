@@ -65,7 +65,9 @@ public class ControlGUIScript : MonoBehaviour {
         }
         if (Input.GetMouseButton(1))
         {
-            Value = Value - 0.1f;
+   
+            
+            Value = Value - Enermy.Power * 0.01f;
         }
 
         if (GBS == null)

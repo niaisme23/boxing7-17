@@ -28,7 +28,7 @@ public class BloodRepeatScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
        
         if(Input.GetMouseButton(0))
         {
@@ -36,12 +36,18 @@ public class BloodRepeatScript : MonoBehaviour {
             Instantiate(prefab, target.transform);
             this.hsAudio.Play();
             this.enabled = false;
+
+            if (Input.GetMouseButton(0))
+                this.enabled = true;
         }
         if (Input.GetMouseButton(1))
         {
             Instantiate(prefab, target.transform);
             this.hsAudio2.Play();
             this.enabled = false;
+
+            if (Input.GetMouseButton(1))
+                this.enabled = true;
         }
         
         
